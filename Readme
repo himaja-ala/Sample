@@ -1,0 +1,50 @@
+Sample Application Steps
+https://java2blog.com/spring-restful-web-services-example/
+
+goto new -> project-> Maven Project and click on next
+
+
+3) You will see below screen , again click on next
+
+
+4) We need to select type of archetype here.As we are creating web app here, please put following text in filter : maven-archetype-webapp
+
+
+5) We need to put group id and artifact id here.
+When I have followed above steps, I was getting below error.
+“The superclass “javax.servlet.http.HttpServlet” was found in java build path”.
+
+Add this in pom.xml 
+<dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.0.1</version>
+        <scope>provided</scope>
+</dependency>
+
+right click on project -> properties -> target runtimes
+
+
+8) It ‘s time to do maven build.
+Right click on project -> Run as -> Maven build
+
+
+9)  Provide goals as clean install (given below) and click on run
+
+
+10) When you run maven build, you will see below screen
+
+
+11) Deploy this application to tomcat server and run it.
+If you don’t have tomcat server configured in eclipse, follow these steps.
+Right click on project -> run as -> run on server -> choose tomcat.
+
+12)
+When you run application, you will get following output:
+
+Database MYSQL set up:
+•	Download mysql workbench
+•	Create a Database using MySQL Workbench
+https://dzone.com/articles/creating-magic-with-the-cli
+
+https://github.com/javabyranjith/spring-framework-mvc/tree/master/springmvc-userlogin
